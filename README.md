@@ -1,4 +1,4 @@
-# ubiquiti
+# Ubiquiti
 Tools for Ubiquiti
 
 Script change password massive in Ubiquiti
@@ -12,7 +12,10 @@ You need run Script one User and three password because check password valid in 
 
 ```./changepassword.sh ip.txt USER PASS1 PASS2 PASS3 NEWPASS```
 
-## file ip.txt
+Comment: Change the privileges to 0755 to be able to execute it in the terminal.
+
+
+## File ip.txt
 
 Contain your IP, example:
 ```
