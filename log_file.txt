@@ -1,0 +1,50 @@
+spawn /usr/bin/ssh wexmaster@192.168.1.28
+wexmaster@192.168.1.28's password: 
+Permission denied, please try again.
+
+wexmaster@192.168.1.28's password: 
+Permission denied, please try again.
+
+wexmaster@192.168.1.28's password: 
+   KM                       ,ok0KNWW    
+         KM               :NMMMMMMMM    
+       KM  ..             WMMMMMMMMM    
+   KM      KM             WMMMMMMMMM    
+   KM    KM               WMMMMMMMMM    
+   KM  KM  ..             WMMMMMMMMM    
+   KM  ..  KM             WMMMMMMMMM    
+   KM  KM  KM             WMMMMMMMMM    
+   KMNXWM  KM             WMMMMMMMMK    
+   KMMMMMKONM             WMMMMMMMW     
+   KMMMMMMMMM             WMMMMMMM x    
+   lMMMMMMMMM             WMMMMMN xK    
+    MMMMMMMMMl           ,WMMMP dXM:    
+    lMMMMMMMMx .        ,,,aaadXMMd     
+     lNMMMMMMW: XOxolcclodOKMMMMWc      
+       lXMMMMMNc lMMMMMMMMMMMMNo.       
+         llONMMM0c lMMMMMMNOo'          
+              'lMN;. lMWl'              
+
+
+BusyBox v1.11.2 (2016-05-15 21:15:59 EEST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+XM.v5.6.5# cat /etc/passwd 
+wexmaster:$1$7aYqBfol$ZAjD.JMRcmO9QhBUBMipA/:0:0:Administrator:/etc/persistent:/bin/sh
+XM.v5.6.5# 
+XM.v5.6.5# passwd
+Changing password for wexmaster
+New password:
+Bad password: too weak
+Retype password:
+Password for wexmaster changed by wexmaster
+XM.v5.6.5# cat /etc/passwd 
+wexmaster:$1$BGYwsaSs$seUwnTkRg1Pl45N9d7uX11:0:0:Administrator:/etc/persistent:/bin/sh
+XM.v5.6.5# 
+XM.v5.6.5# sed -i 's+$1$7aYqBWol$ZAjE.JMRcmO9QhBUBMXpA/+$1$BeYwsaSs$seUUnTkRg1Pl45N937uX11+g' /tmp/system.cfg
+XM.v5.6.5# save
+Found  Active on[1] ...
+Found Backup1 on[2] ...
+Storing Active[2] ... [%0  ][%100]
+Active->Backup[1] ... [%0  ][%100]
+XM.v5.6.5# spawn /usr/bin/ssh wexmaster@192.168.1.28
